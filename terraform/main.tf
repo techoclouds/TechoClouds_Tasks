@@ -33,7 +33,7 @@ data "aws_iam_policy_document" "assume_role" {
 
 
 resource "aws_iam_role" "ebs-checker-lambda-role" {
-  name               = "iam_for_lambda"
+  name               = "ebs-checker-lambda-role"
   assume_role_policy = data.aws_iam_policy_document.assume_role.json
   inline_policy {
     name = "ebs"
